@@ -1,0 +1,64 @@
+@import '../../base.less';
+
+.p-proDetail {
+	.info {
+		background-color: #FFFFFF;
+		border: 1px solid #eeeeee;
+		padding: 3px;
+		text-align: center;
+		font-size: 12px;
+		line-height: 2em;
+		div:nth-child(odd) {
+			background-color: #eeeeee;
+		}
+	}
+	.item {
+		padding: 0 10px;
+		.tip {
+			font-size: 16px;
+			line-height: 2em;
+			font-weight: bold;
+		}
+		.text {
+			padding: 5px;
+			p, span, font {
+				margin: 0;
+				padding: 0;
+				line-height: 1.6em !important;
+				font-family: "Helvetica","Arial",sans-serif !important;
+			}
+			pre {
+				overflow-x: auto;
+				// word-wrap: break-word;
+			}
+		}
+		.code {
+			border: 1px solid #dee3e9;
+			line-height: 1.5em;
+			padding: 10px;
+			background-color: #F5F5F5;
+			white-space: pre;
+			overflow-x: auto;
+			font-size: 14px;
+			line-height: 1.5em;
+		}
+	}
+	.btn-area {
+		margin: 15px auto;
+		button {
+			width: 100%;
+		}
+	}
+	.check-area {
+		padding-top: 20px;
+		.text {
+			display: inline-block;
+			line-height: 25px;
+		}
+	}
+	.textarea {
+		width: 100%;
+		min-height: 250px;
+		margin: 6px 0;
+	}
+}

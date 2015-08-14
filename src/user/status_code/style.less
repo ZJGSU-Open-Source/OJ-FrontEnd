@@ -1,0 +1,41 @@
+.p-code-detail {
+	.source {
+		width: 100%;
+		line-height: 20px;
+		border: 1px solid #dee3e9;
+		font-size: 14px;
+		lihe-height: 24px;
+		@media screen and (min-width: 480px) {
+			display: none;
+		}
+	}
+	.code {
+		@media screen and (max-width: 479px) {
+			display: none;
+		}
+		border: 1px solid #dee3e9;
+		border-left: 10px solid #dee3e9;
+		overflow: auto;
+		li {
+			list-style-type: decimal;
+		}
+	}
+	.small {
+		@media screen and (min-width: 480px) {
+			display: none;
+		}
+		border: 1px solid #dee3e9;
+		line-height: 1.5em;
+		padding: 10px;
+		background-color: #F5F5F5;
+		white-space: pre;
+		overflow-x: auto;
+		font-size: 15px;
+		line-height: 1.5em;
+	}
+	.large {
+		@media screen and (max-width: 479px) {
+			display: none;
+		}
+	}
+}

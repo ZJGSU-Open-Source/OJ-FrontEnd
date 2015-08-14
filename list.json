@@ -1,0 +1,31 @@
+{
+	"user": [
+		"contest_list",
+		"faq",
+		"osc",
+		"layout",
+		"news_detail",
+		"news_list",
+		"problem_detail",
+		"problem_list",
+		"ranklist",
+		"status_code",
+		"status_list",
+		"user_detail",
+		"user_edit",
+		"user_password",
+		"user_signin",
+		"user_signup"
+	],
+	"admin": [
+		"layout"
+	],
+	"contest": [
+		"passwd",
+		"problem_detail",
+		"problem_list",
+		"ranklist",
+		"status_code",
+		"status_list"
+	]
+}
