@@ -13,7 +13,7 @@ if( PATH == '/' ) {
 		var staticTop = staticNode.offset().top;
 		var listTop = listNode.offset().top;
 		if( staticTop<=70 && !staticNode.hasClass('static-table-fix')){
-			staticNode.addClass('static-table-fix').css('width', staticWidth);
+			staticNode.addClass('static-table-fix');
 			listNode.addClass('list-fix');
 		}
 		if( listTop>=70 && staticNode.hasClass('static-table-fix') ){

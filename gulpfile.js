@@ -2,7 +2,7 @@ var gulp = require('gulp');
 //页面名称
 var list = require('./list.json');
 
-var BASE_URL = '../GoOnlineJudge';
+var BASE_URL = 'D:/workspace/go/src/GoOnlineJudge';
 
 // 引入组件
 var less = require('gulp-less'),            // less
@@ -64,16 +64,18 @@ gulp.task('buildlib',function(){
 });
 
 // 定义develop任务在日常开发中使用
-gulp.task('develop',function(){
+gulp.task('develop', function(){
+  var date = new Date();
+  console.log('----------' + date + '----------');
+  console.log('-------------build----------------');
   gulp.run('buildlib','build-less','javascripts');
-
-  // gulp.watch('./src/**/**/*', ['develop']);
-  gulp.watch('./src/a.txt', ['develop']);
+  gulp.watch(['./src/**/**/*.tpl','./src/**/**/style.less'],
+      ['develop']);
 });
 
 // 定义一个prod任务作为发布或者运行时使用
 gulp.task('prod',function(){
-  gulp.run('buildlib','build-less','stylesheets','javascripts');
+  gulp.run('buildlib','build-less','javascripts');
 
   // 监听.less文件,一旦有变化,立刻调用build-less任务执行
   // gulp.watch('./javis/static/less/*.less', ['build-less']);

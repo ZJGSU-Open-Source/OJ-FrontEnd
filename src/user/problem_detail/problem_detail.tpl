@@ -4,7 +4,7 @@
 {{with .Detail}}
 <div class="p-proDetail mdl-grid">
   <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone"></div>
-  <div class="page mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-shadow--2dp">
+  <div class="page mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-shadow--2dp J_list">
     <div class="go-title-area border mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
       <div class="title">{{.Title}}</div>
     </div>
@@ -80,7 +80,7 @@
   </div>
 
   <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-    <div class="info mdl-shadow--2dp mdl-cell--12-col mdl-cell--4-col-phone mdl-layout--large-screen-only">
+    <div class="info mdl-shadow--2dp go-large J_static">
       <div>Time Limit</div>
       <div>{{.Time}}s</div>
       <div>Memory Limit</div>
@@ -89,7 +89,9 @@
       <div>{{ShowSpecial .Special}}</div>
       <div>Ratio(Solve/Submit)</div>
       <div>
-        {{ShowRatio .Solve .Submit}}(<a href="/status?pid={{.Pid}}&judge=3">{{.Solve}}</a>/<a href="/status?pid={{.Pid}}">{{.Submit}}</a>)
+        {{ShowRatio .Solve .Submit}}(
+        <a href="/status?pid={{.Pid}}&judge=3">{{.Solve}}</a> / 
+        <a href="/status?pid={{.Pid}}">{{.Submit}}</a> )
       </div>
     </div>
   </div>
