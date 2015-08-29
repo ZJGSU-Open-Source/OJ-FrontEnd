@@ -1,5 +1,5 @@
 if( /^\/contests\/(\d+)$/.test(PATH) ) {
-
+  
   var timeNode = $('.J_time');
   var startNode = $('.J_start');
   var endNode = $('.J_end');

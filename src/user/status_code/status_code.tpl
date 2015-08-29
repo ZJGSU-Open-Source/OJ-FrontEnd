@@ -1,6 +1,6 @@
 {{define "content"}}
 {{with .Solution}}
-<script src="../static/js/prettify.js"></script>
+<script src="/static/js/prettify.js"></script>
 <div class="p-code-detail mdl-grid"> 
   <div class="page mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-shadow--2dp mdl-grid">
     <div class="go-title-area border text-center mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">

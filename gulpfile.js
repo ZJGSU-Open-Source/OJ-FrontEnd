@@ -47,6 +47,9 @@ gulp.task('buildlib',function(){
   gulp.src('./lib/css/*.css')
     .pipe(minifycss())
     .pipe(gulp.dest(BASE_URL+'/static/css/'))
+  //------------------------------------------------------------------
+  gulp.src('./lib/css/materialIcon.woff2')
+    .pipe(gulp.dest(BASE_URL+'/static/fonts'))
   //--------------------------tpl-------------------------------------
   list['user'].forEach(function(v, i){
     gulp.src('./src/user/' + v + '/*.tpl')
@@ -58,9 +61,11 @@ gulp.task('buildlib',function(){
       // .pipe(rename( v + '.tpl' ))
       .pipe(gulp.dest(BASE_URL+'/view/contest/'));
   });
-  gulp.src('./src/admin/*.tpl')
-    .pipe(gulp.dest(BASE_URL+'/view/admin'));
-  
+  list['admin'].forEach(function(v, i){
+    gulp.src('./src/admin/' + v + '/*.tpl')
+      // .pipe(rename( v + '.tpl' ))
+      .pipe(gulp.dest(BASE_URL+'/view/admin/'));
+  });
 });
 
 // 定义develop任务在日常开发中使用
@@ -69,8 +74,7 @@ gulp.task('develop', function(){
   console.log('----------' + date + '----------');
   console.log('-------------build----------------');
   gulp.run('buildlib','build-less','javascripts');
-  gulp.watch(['./src/**/**/*.tpl','./src/**/**/style.less'],
-      ['develop']);
+  // gulp.watch(['./src/admin/**/*.tpl','./src/admin/**/style.less','./src/admin/**/index.js'], ['develop']);
 });
 
 // 定义一个prod任务作为发布或者运行时使用
@@ -83,6 +87,6 @@ gulp.task('prod',function(){
 
 
 // gulp命令默认启动的就是default认为,这里将clean任务作为依赖,也就是先执行一次clean任务,流程再继续.
-gulp.task('default', ['clean'], function(){
+gulp.task('default', function(){
   gulp.run('develop');
 });

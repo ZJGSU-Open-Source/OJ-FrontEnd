@@ -15,10 +15,22 @@
 		"user_edit",
 		"user_password",
 		"user_signin",
-		"user_signup"
+		"user_signup",
+		"pagination"
 	],
 	"admin": [
-		"layout"
+		"layout",
+		"home",
+		"notice",
+		"news_list",
+		"news_add",
+		"news_edit",
+		"problem_list",
+		"problem_add",
+		"problem_edit",
+		"problem_import",
+		"rejudge",
+		"contest_list"
 	],
 	"contest": [
 		"passwd",
@@ -26,6 +38,7 @@
 		"problem_list",
 		"ranklist",
 		"status_code",
-		"status_list"
+		"status_list",
+		"link"
 	]
 }

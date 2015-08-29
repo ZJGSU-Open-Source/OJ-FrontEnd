@@ -136,28 +136,7 @@ select {
 	vertical-align: bottom;
 	color: #3f51b5;
 }
-//页数选择框体
-.go-pagination {
-	text-align: center;
-	.btn {
-		display: inline-block;
-		min-width: 0;
-		height: 30px;
-		line-height: 30px;
-		@media screen and (max-width:479px){
-			width: 25px;
-		}
-		@media screen and (min-width:480px){
-			width: 50px;
-		}
-		padding: 0;
-		text-align: center;
-		vertical-align: middle;
-		&.now {
-			background-color: #eee;
-		}
-	}
-}
+
 //配色方案
 //pengding
 .static-0 {
@@ -170,6 +149,9 @@ select {
 //ac
 .static-3 {
 	color: #f44336;
+}
+.ac {
+	background-color: rgb(79, 234, 79);
 }
 //ce
 .static-2 {
@@ -210,5 +192,32 @@ select {
 	}
 }
 
+.static-fix {
+	position: fixed;
+	top: 70px;
+}
+.list-fix {
+  margin: 0 auto;
+}
 
-
+.marquee-area {
+	background-color: #FFFFFF;
+	padding: 10px 0;
+	.marquee {
+		direction: left;
+		scrollamount: 2;
+		scrolldelay: 30;
+	}
+}
+//加载容器
+.go-loading {
+	box-sizing: border-box;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  padding-top: 3px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  text-align: center;
+}

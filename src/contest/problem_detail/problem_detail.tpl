@@ -2,21 +2,9 @@
 {{$compiler_id := .Compiler_id}}
 <div class="p-proDetail mdl-grid">
   <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-    <div class="info J_static mdl-shadow--2dp">
-    <div class="link">
-      <a href="/contests/{{.Cid}}">Problem</a>
-    </div>
-    <div class="link">
-      <a href="/contests/{{.Cid}}/status">Status</a>
-    </div>
-    <div class="link">
-      <a href="/contests/{{.Cid}}/ranklist">Ranklist</a>
-    </div>
+    {{template "link" .}}
   </div>
-    
-    
-    
-  </div>
+  
   <div class="page mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-shadow--2dp J_list">
     {{with .Detail}}
     <div class="go-title-area border mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">

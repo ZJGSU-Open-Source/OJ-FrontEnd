@@ -30,40 +30,104 @@
         </div>
         <div id="navibar" class="span-3">
         <ul>
-          <li>{{if .IsHome}}<span>Home</span>{{else}}<a href="/admin">Home</a>{{end}}</li>
+          <li>
+            {{if .IsHome}}
+            <span>Home</span>
+            {{else}}
+            <a href="/admin">Home</a>
+            {{end}}
+          </li>
           {{if .IsAdmin}}
-          <li>{{if .IsNotice}}<span>Notice</span>{{else}}<a href="/admin/notice">Notice</a>{{end}}</li>
-          <li><a href="/admin/news">News</a></li>
-          {{if .IsNews}}
+            <li>
+              {{if .IsNotice}}
+              <span>Notice</span>
+              {{else}}
+              <a href="/admin/notice">Notice</a>
+              {{end}}
+            </li>
+            <li>
+              <a href="/admin/news">News</a>
+            </li>
+            {{if .IsNews}}
             <div id="psnavi">
               <ul>
-                <li>{{if .IsList}}<span>List</sapn>{{else}}<a href="/admin/news">List</a>{{end}}</li>
-                <li>{{if .IsAdd}}<span>Add</sapn>{{else}}<a href="/admin/news/new">Add</a>{{end}}</li>
+                <li>
+                  {{if .IsList}}
+                  <span>List</sapn>
+                  {{else}}
+                  <a href="/admin/news">List</a>
+                  {{end}}
+                </li>
+                <li>
+                  {{if .IsAdd}}
+                  <span>Add</sapn>
+                  {{else}}
+                  <a href="/admin/news/new">Add</a>
+                  {{end}}
+                </li>
               </ul>
             </div>
-          {{end}}
+            {{end}}
           {{end}}
           <li><a href="/admin/problems">Problems</a></li>
           {{if .IsProblem}}
             <div id="psnavi">
               <ul>
-                <li>{{if .IsList}}<span>List</sapn>{{else}}<a href="/admin/problems">List</a>{{end}}</li>
+                <li>
+                  {{if .IsList}}
+                  <span>List</sapn>
+                  {{else}}
+                  <a href="/admin/problems">List</a>
+                  {{end}}
+                </li>
                 {{if .IsAdmin}}
-                <li>{{if .IsAdd}}<span>Add</sapn>{{else}}<a href="/admin/problems/new">Add</a>{{end}}</li>
-                <li>{{if .IsImport}}<span>Import</sapn>{{else}}<a href="/admin/problems/importor">Import</a>{{end}}</li>
+                <li>
+                  {{if .IsAdd}}
+                  <span>Add</sapn>
+                  {{else}}
+                  <a href="/admin/problems/new">Add</a>
+                  {{end}}
+                </li>
+                <li>
+                  {{if .IsImport}}
+                  <span>Import</sapn>
+                  {{else}}
+                  <a href="/admin/problems/importor">Import</a>
+                  {{end}}
+                </li>
                 {{end}}
                 {{if .RejudgePrivilege}}
-                <li>{{if .IsRejudge}}<span>Rejudge</span>{{else}}<a href="/admin/rejudger">Rejudge</a>{{end}}</li>
+                <li>
+                  {{if .IsRejudge}}
+                  <span>Rejudge</span>
+                  {{else}}
+                  <a href="/admin/rejudger">Rejudge</a>
+                  {{end}}
+                </li>
                 {{end}}
               </ul>
             </div>
           {{end}}
-          <li><a href="/admin/contests/">Contests</a></li>
+          <li>
+            <a href="/admin/contests/">Contests</a>
+          </li>
           {{if .IsContest}}
             <div id="psnavi">
               <ul>
-                <li>{{if .IsList}}<span>List</sapn>{{else}}<a href="/admin/contests/">List</a>{{end}}</li>
-                <li>{{if .IsAdd}}<span>Add</sapn>{{else}}<a href="/admin/contests/new">Add</a>{{end}}</li>
+                <li>
+                  {{if .IsList}}
+                  <span>List</sapn>
+                  {{else}}
+                  <a href="/admin/contests/">List</a>
+                  {{end}}
+                </li>
+                <li>
+                  {{if .IsAdd}}
+                  <span>Add</sapn>
+                  {{else}}
+                  <a href="/admin/contests/new">Add</a>
+                  {{end}}
+                </li>
               </ul>
             </div>
           {{end}}

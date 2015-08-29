@@ -16,7 +16,7 @@
         <label class="mdl-textfield__label" for="user_password">Password</label>
         <span class="mdl-textfield__error">请输入密码</span>
       </div>
-      <div class="btn-area" style="text-align: center">
+      <div class="btn-area mdl-cell--12-col mdl-cell--4-col-phone">
         <!-- Accent-colored raised button with ripple -->
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored J_submit" type="submit">signin</button>
         <!-- Accent-colored raised button with ripple -->

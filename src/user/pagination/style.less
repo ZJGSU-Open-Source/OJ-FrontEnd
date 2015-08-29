@@ -1,0 +1,21 @@
+.m-pagination {
+	text-align: center;
+	.btn {
+		display: inline-block;
+		min-width: 0;
+		height: 30px;
+		line-height: 30px;
+		@media screen and (max-width:479px){
+			width: 25px;
+		}
+		@media screen and (min-width:480px){
+			width: 50px;
+		}
+		padding: 0;
+		text-align: center;
+		vertical-align: middle;
+		&.now {
+			background-color: #eee;
+		}
+	}
+}

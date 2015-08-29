@@ -1,6 +1,12 @@
 {{define "content"}}
 <div class="p-conProList mdl-grid">
-  <div class="page mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-shadow--2dp">
+  
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
+    {{template "link" .}}
+  </div>
+
+
+  <div class="page mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-shadow--2dp J_list">
     <div class="go-title-area mdl-cell--12-col mdl-cell--4-col-phone mdl-grid">
     
       <div class="title mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">{{.Contest}}</div>
@@ -46,5 +52,7 @@
     </div>
 
   </div>
+
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone"></div>
 </div>
 {{end}}

@@ -2,8 +2,13 @@
 {{$cid := .Cid}}
 
 
-<div class="p-rankList mdl-grid">
-  <div class="page mdl-cell mdl-cell--10-col mdl-cell--4-col-phone mdl-shadow--2dp">
+<div class="p-conRankList mdl-grid">
+
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
+    {{template "link" .}}
+  </div>
+
+  <div class="page mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-shadow--2dp J_list">
     <div class="go-title-area border mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
       <div class="title">
         Contest RankList -- {{.Contest}}
@@ -43,7 +48,7 @@
               {{range .}}
                 {{if .}}
                   {{if eq .Judge 3}}
-                    <td>{{ShowGapTime .Time}}/({{.Count}})</td>
+                    <td class="ac">{{ShowGapTime .Time}}/({{.Count}})</td>
                   {{else}}
                     <td>0/({{.Count}})</td>
                   {{end}}
@@ -60,5 +65,9 @@
     </div>
     
   </div>
+
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone"></div>
+
+
 </div>
 {{end}}
