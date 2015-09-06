@@ -4,12 +4,22 @@
 
 <div class="p-conRankList mdl-grid">
 
-  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-    {{template "link" .}}
+  <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet mdl-cell--4-col-phone">
+    <div class="m-link J_static mdl-shadow--2dp">
+      <div class="link">
+        <a href="/contests/{{.Cid}}">Problem</a>
+      </div>
+      <div class="link">
+        <a href="/contests/{{.Cid}}/status">Status</a>
+      </div>
+      <div class="link current">
+        <a>Ranklist</a>
+      </div>
+    </div>
   </div>
 
-  <div class="page mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-shadow--2dp J_list">
-    <div class="go-title-area border mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
+  <div class="page mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp J_list">
+    <div class="go-title-area mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
       <div class="title">
         Contest RankList -- {{.Contest}}
         <a class="mdl-button mdl-js-button mdl-button--icon" href="/contests/{{.Cid}}/rankfile">
@@ -66,7 +76,7 @@
     
   </div>
 
-  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone"></div>
+  <div class="mdl-cell mdl-cell--1-col mdl-cell--4-col-phone"></div>
 
 
 </div>

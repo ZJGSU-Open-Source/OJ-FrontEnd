@@ -12,20 +12,20 @@ var less = require('gulp-less'),            // less
     rename = require('gulp-rename'),        // 重命名
     clean = require('gulp-clean');          //清空文件夹
 
-// less解析
-gulp.task('build-less', function(){
-  gulp.src(['./src/user/**/*.less', './src/contest/**/*.less', './src/admin/**/*.less'])
+// 解析，合并，压缩less
+gulp.task('less', function(){
+  gulp.src(['./src/user/**/*.less', './src/contest/**/*.less', './src/admin/**/*.less', './src/base.less'])
     .pipe(less())
     .pipe(concat('GoOnlineJudge.css'))
-    // .pipe(minifycss())
+    .pipe(minifycss())
     .pipe(gulp.dest(BASE_URL+'/static/css/'));
 });
 
-// 合并，压缩js文件
-gulp.task('javascripts', function() {
-  gulp.src(['./src/user/**/*.js', './src/contest/**/*.js', './src/admin/**/*.js'])
+// 合并，压缩js
+gulp.task('js', function() {
+  gulp.src(['./src/index.js', './src/user/**/*.js', './src/contest/**/*.js', './src/admin/**/*.js'])
     .pipe(concat('GoOnlineJudge.js'))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest(BASE_URL+'/static/js/'));
 });
 
@@ -38,7 +38,7 @@ gulp.task('clean', function() {
 });
 
 // 将库文件对应到指定位置
-gulp.task('buildlib',function(){
+gulp.task('lib',function(){
   //---------------------------js-------------------------------------
   gulp.src('./lib/js/*.js')
     .pipe(uglify())
@@ -50,7 +50,10 @@ gulp.task('buildlib',function(){
   //------------------------------------------------------------------
   gulp.src('./lib/css/materialIcon.woff2')
     .pipe(gulp.dest(BASE_URL+'/static/fonts'))
-  //--------------------------tpl-------------------------------------
+  
+});
+
+gulp.task('tpl', function(){
   list['user'].forEach(function(v, i){
     gulp.src('./src/user/' + v + '/*.tpl')
       // .pipe(rename( v + '.tpl' ))
@@ -73,8 +76,11 @@ gulp.task('develop', function(){
   var date = new Date();
   console.log('----------' + date + '----------');
   console.log('-------------build----------------');
-  gulp.run('buildlib','build-less','javascripts');
-  // gulp.watch(['./src/admin/**/*.tpl','./src/admin/**/style.less','./src/admin/**/index.js'], ['develop']);
+  gulp.run('lib', 'less', 'js', 'tpl');
+  gulp.watch('./src/**/**/*.js', ['js']);
+  gulp.watch('./src/**/**/*.less', ['less']);
+  gulp.watch('./src/**/**/*.tpl', ['tpl']);
+  gulp.watch('./list.json', ['js', 'less', 'tpl']);
 });
 
 // 定义一个prod任务作为发布或者运行时使用
@@ -87,6 +93,6 @@ gulp.task('prod',function(){
 
 
 // gulp命令默认启动的就是default认为,这里将clean任务作为依赖,也就是先执行一次clean任务,流程再继续.
-gulp.task('default', function(){
+gulp.task('default', ['clean'], function(){
   gulp.run('develop');
 });

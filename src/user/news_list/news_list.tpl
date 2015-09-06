@@ -6,9 +6,10 @@
     <div class="img-area mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
     </div>
   </div>
+
   <div class="mdl-grid">
 
-    <section class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone J_static">
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone J_static">
       <table class="static-table mdl-data-table mdl-js-data-table mdl-shadow--2dp">
         <thead>
           <tr>
@@ -33,13 +34,13 @@
           {{end}}
         </tbody>
       </table>
-    </section>
+    </div>
 
-    <section class="new-list mdl-cell mdl-grid--no-spacing mdl-cell--6-col mdl-cell--4-col-phone J_list">
+    <div class="new-list mdl-cell mdl-grid--no-spacing mdl-cell--6-col mdl-cell--4-col-phone J_list">
       {{with .News}}
         {{range .}}
           {{if ShowStatus .Status}}
-            <div class="new-card mdl-card mdl-cell--12-col mdl-shadow--2dp">
+            <section class="new-card mdl-card mdl-cell--12-col mdl-shadow--2dp">
               <div class="mdl-card__title mdl-card--expand">
                 <h2 class="mdl-card__title-text">{{.Title}}</h2>
               </div>
@@ -52,12 +53,11 @@
                   <i class="material-icons">share</i>
                 </button>
               </div> -->
-            </div>
+            </section>
           {{end}}
         {{end}}
       {{end}}
-    </section>
-
+    </div>
   </div>
 
 </div>

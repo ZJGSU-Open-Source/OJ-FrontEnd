@@ -1,6 +1,7 @@
 {{define "content"}}
 <div class="p-user-detail mdl-grid">
-    <div class="page mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-shadow--2dp">
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <div class="page mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-shadow--2dp">
       <div class="go-title-area border mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
         <div class="title">User Detail</div>
       </div>

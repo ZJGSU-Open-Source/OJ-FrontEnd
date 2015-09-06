@@ -1,12 +1,12 @@
 {{define "content"}}
 <div class="p-adminProblem mdl-grid">
 
-  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet mdl-cell--4-col-phone">
     <div class="m-link J_static mdl-shadow--2dp">
       <div class="link">
         <a href="/admin/problems">List</a>
       </div>
-      <div class="link">
+      <div class="link current">
         <a href="/admin/problems/new">Add</a>
       </div>
       <div class="link">
@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  <div class="page mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-shadow--2dp mdl-grid J_list">
+  <div class="page mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp mdl-grid J_list">
     <form accept-charset="UTF-8" class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-grid mdl-grid--no-spacing" action="/admin/problems/" method="post">
       <div class="go-title-area mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
         <div class="title">Problem Add</div>

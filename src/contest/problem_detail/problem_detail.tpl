@@ -1,16 +1,23 @@
 {{define "content"}}
 {{$compiler_id := .Compiler_id}}
 <div class="p-proDetail mdl-grid">
-  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-    {{template "link" .}}
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+    <div class="m-link J_static mdl-shadow--2dp">
+      <div class="link">
+        <a href="/contests/{{.Cid}}">Problem</a>
+      </div>
+      <div class="link">
+        <a href="/contests/{{.Cid}}/status">Status</a>
+      </div>
+      <div class="link">
+        <a href="/contests/{{.Cid}}/ranklist">Ranklist</a>
+      </div>
+    </div>
   </div>
   
-  <div class="page mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-shadow--2dp J_list">
+  <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--2-col-phone mdl-cell--hide-desktop">
     {{with .Detail}}
-    <div class="go-title-area border mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
-      <div class="title">{{.Title}}</div>
-    </div>
-    <div class="info mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--4-col-phone go-small" style="float: right;">
+    <div class="info mdl-shadow--2dp">
       <div>Time Limit</div>
       <div>{{.Time}}s</div>
       <div>Memory Limit</div>
@@ -18,8 +25,17 @@
       <div>Judge Program</div>
       <div>{{ShowSpecial .Special}}</div>
       <div>Ratio(Solve/Submit)</div>
-      <div>{{ShowRatio .Solve .Submit}}({{.Solve}}/{{.Submit}})</div>
+      <div>{{ShowRatio .Solve .Submit}}( {{.Solve}} / {{.Submit}} )</div>
     </div>
+    {{end}}
+  </div>
+
+  <div class="page mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp J_list">
+    {{with .Detail}}
+    <div class="go-title-area border mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
+      <div class="title">{{.Title}}</div>
+    </div>
+    
     <div class="item mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
       <div class="tip">Description:</div>
       <section class="text">{{.Description}}</section>
@@ -73,9 +89,10 @@
     </div>
 
   </div>
-  {{with .Detail}}
-  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-    <div class="info go-large J_static mdl-shadow--2dp">
+  
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-cell--hide-phone mdl-cell--hide-tablet">
+    {{with .Detail}}
+    <div class="info J_static mdl-shadow--2dp">
       <div>Time Limit</div>
       <div>{{.Time}}s</div>
       <div>Memory Limit</div>
@@ -85,8 +102,9 @@
       <div>Ratio(Solve/Submit)</div>
       <div>{{ShowRatio .Solve .Submit}}( {{.Solve}} / {{.Submit}} )</div>
     </div>
+    {{end}}
   </div>
-  {{end}}
+  
 </div>
 
 <link rel="stylesheet" href="/static/css/codemirror.css">

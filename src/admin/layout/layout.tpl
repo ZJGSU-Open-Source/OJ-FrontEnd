@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
     <title>{{.Title}}</title>
-    
-    <link rel="stylesheet" href="/static/css/material.css">
+
     <link rel="stylesheet" href="/static/css/fonts.css">
+    <link rel="stylesheet" href="/static/css/material.css">
     <link rel="stylesheet" href="/static/css/GoOnlineJudge.css">
     
     <script src="/static/js/jquery.js"></script>
@@ -67,7 +67,7 @@
       </div>
 
       <main class="mdl-layout__content J_main">
-
+        
         <div class="page-content"><!-- Your content goes here -->
           {{template "content" .}}
           

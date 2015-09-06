@@ -1,5 +1,6 @@
 {{define "content"}}
 <div class="p-adminNotice mdl-grid">
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-phone mdl-cell--hide-tablet"></div>
   <div class="page mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-shadow--2dp mdl-grid">
     <form accept-charset="UTF-8" class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone" action="/admin/notice" method="post">
       <div class="go-title-area mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">

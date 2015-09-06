@@ -1,11 +1,21 @@
 {{define "content"}}
 <meta http-equiv="refresh" content="30">
 <div class="p-staticList mdl-grid">
-  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-    {{template "link" .}}
+  <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet mdl-cell--4-col-phone">
+    <div class="m-link J_static mdl-shadow--2dp">
+      <div class="link">
+        <a href="/contests/{{.Cid}}">Problem</a>
+      </div>
+      <div class="link current">
+        <a>Status</a>
+      </div>
+      <div class="link">
+        <a href="/contests/{{.Cid}}/ranklist">Ranklist</a>
+      </div>
+    </div>
   </div>
 
-  <div class="page mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-shadow--2dp J_list">
+  <div class="page mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp J_list">
 
     <form accept-charset="UTF-8" id="search_form">
       <div class="mdl-grid">
@@ -130,6 +140,6 @@
     </div>
 
   </div>
-  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone"></div>
+  <div class="mdl-cell mdl-cell--1-col mdl-cell--4-col-phone"></div>
 </div>
 {{end}}

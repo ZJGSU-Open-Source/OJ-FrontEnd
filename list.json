@@ -30,7 +30,13 @@
 		"problem_edit",
 		"problem_import",
 		"rejudge",
-		"contest_list"
+		"contest_list",
+		"contest_add",
+		"contest_edit",
+		"user_list",
+		"user_password",
+		"user_generate",
+		"test_data"
 	],
 	"contest": [
 		"passwd",
@@ -38,7 +44,6 @@
 		"problem_list",
 		"ranklist",
 		"status_code",
-		"status_list",
-		"link"
+		"status_list"
 	]
 }

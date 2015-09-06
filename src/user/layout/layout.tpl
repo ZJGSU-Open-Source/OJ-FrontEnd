@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="/static/css/material.css">
     <link rel="stylesheet" href="/static/css/fonts.css">
     <link rel="stylesheet" href="/static/css/GoOnlineJudge.css">
-    <link rel="stylesheet" href="/static/css/mobiscroll.css">
     
     <script src="/static/js/jquery.js"></script>
     <script src="/static/js/material.js"></script>
-    <script src="/static/js/mobiscroll.js"></script>
+    
   </head>
   <body>
     
@@ -88,6 +87,7 @@
             <marquee class="marquee" onmouseover="this.stop()" onmouseout="this.start()"><a href="http://rex-zsd-oj.daoapp.io/">{{.Msg}}</marquee>
           </div>
           {{end}}
+          
           {{template "content" .}}
         </div>
 

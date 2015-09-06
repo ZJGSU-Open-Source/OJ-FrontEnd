@@ -1,5 +1,6 @@
 {{define "content"}}
 <div class="p-proList mdl-grid">
+  <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-phone mdl-cell--hide-tablet"></div>
   <div class="page mdl-cell mdl-cell--10-col mdl-cell--4-col-phone mdl-shadow--2dp">
 
     <form accept-charset="UTF-8" class="J_searchForm">
