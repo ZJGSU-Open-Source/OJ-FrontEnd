@@ -132,7 +132,7 @@
 
         </footer>
       </main>
-      <div class="warn J_warn"></div>
+      <div class="warn J_warn">123</div>
     </div>
   </body>
   <script src="/static/js/GoOnlineJudge.js"></script>

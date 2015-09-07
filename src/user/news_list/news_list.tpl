@@ -9,8 +9,8 @@
 
   <div class="mdl-grid">
 
-    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone J_static">
-      <table class="static-table mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone">
+      <table class="J_static static-table mdl-data-table mdl-js-data-table mdl-shadow--2dp">
         <thead>
           <tr>
             <th>OJ</th>
@@ -36,7 +36,7 @@
       </table>
     </div>
 
-    <div class="new-list mdl-cell mdl-grid--no-spacing mdl-cell--6-col mdl-cell--4-col-phone J_list">
+    <div class="new-list mdl-cell mdl-grid--no-spacing mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone J_list">
       {{with .News}}
         {{range .}}
           {{if ShowStatus .Status}}

@@ -36,24 +36,21 @@ var mainNode = $('.J_main');
 var staticNode =$('.J_static');
 var listNode = $('.J_list');
 if( staticNode.length ){
-  var staticWidth = staticNode.width();
   //固定VOJ框体
+  var initTop = staticNode.offset().top;
   var keep = function(){
     var staticTop = staticNode.offset().top;
     var listTop = listNode.offset().top;
-    if( staticTop<=70 && !staticNode.hasClass('static-fix')){
-      staticNode.addClass('static-fix').css('width', staticWidth);
-      listNode.addClass('list-fix');
+    if( listTop >= 80 ){
+      staticNode.css('top', 0);
     }
-    if( listTop>=70 && staticNode.hasClass('static-fix') ){
-      staticNode.removeClass('static-fix');
-      listNode.removeClass('list-fix');
+    else{
+      staticNode.css('top', mainNode.scrollTop()-initTop+80);
     }
-
   };
   //若设备宽度大于840挂载滚动事件
   $(function(){
-    if( winNode.width() > '840' ){
+    if( winNode.width() >= '480' ){
       mainNode.on('scroll', keep);
     }
   });

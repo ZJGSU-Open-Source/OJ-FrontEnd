@@ -14,18 +14,18 @@ var less = require('gulp-less'),            // less
 
 // 解析，合并，压缩less
 gulp.task('less', function(){
-  gulp.src(['./src/user/**/*.less', './src/contest/**/*.less', './src/admin/**/*.less', './src/base.less'])
+  gulp.src(['./src/*.less', './src/**/**/*.less'])
     .pipe(less())
     .pipe(concat('GoOnlineJudge.css'))
-    .pipe(minifycss())
+    // .pipe(minifycss())
     .pipe(gulp.dest(BASE_URL+'/static/css/'));
 });
 
 // 合并，压缩js
 gulp.task('js', function() {
-  gulp.src(['./src/index.js', './src/user/**/*.js', './src/contest/**/*.js', './src/admin/**/*.js'])
+  gulp.src(['./src/*.js', './src/**/**/*.js'])
     .pipe(concat('GoOnlineJudge.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(BASE_URL+'/static/js/'));
 });
 
