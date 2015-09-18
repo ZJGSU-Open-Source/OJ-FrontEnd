@@ -1,5 +1,5 @@
 {{define "content"}}
-<meta http-equiv="refresh" content="30">
+<!-- <meta http-equiv="refresh" content="30"> -->
 <div class="p-staticList mdl-grid">
   <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-phone mdl-cell--hide-tablet"></div>
   <div class="page mdl-cell mdl-cell--10-col mdl-cell--4-col-phone mdl-shadow--2dp">

@@ -18,11 +18,15 @@ if ( PATH=='/admin/contests/new' || /^\/admin\/contests\/(\d+)$/.test(PATH) ) {
     });
   });
   //解决chrome下label的bug
-  startNode.on('click', function() {
-    $(this).parent().addClass('is-dirty');
+  startNode.on('blur', function() {
+    if( $(this).val() && !$(this).parent().hasClass('is-dirty') ){
+      $(this).parent().addClass('is-dirty');
+    }
   });
-  endNode.on('click', function() {
-    $(this).parent().addClass('is-dirty');
+  endNode.on('blur', function() {
+    if( $(this).val() && !$(this).parent().hasClass('is-dirty') ){
+      $(this).parent().addClass('is-dirty');
+    }
   });
   //比赛类型选择
   var typeNode = $('#J_type');

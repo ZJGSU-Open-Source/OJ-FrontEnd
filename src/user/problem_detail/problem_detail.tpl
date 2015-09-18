@@ -8,7 +8,7 @@
     <div class="go-title-area border mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
       <div class="title">{{.Title}}</div>
     </div>
-    <div class="info mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--4-col-phone mdl-layout--small-screen-only" style="float: right;">
+    <div class="info mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--4-col-phone mdl-cell--hide-desktop" style="float: right;">
       <div>Time Limit</div>
       <div>{{.Time}}s</div>
       <div>Memory Limit</div>
@@ -79,8 +79,8 @@
 
   </div>
 
-  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-    <div class="info mdl-shadow--2dp go-large J_static">
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone mdl-cell--hide-phone mdl-cell--hide-tablet">
+    <div class="info mdl-shadow--2dp J_static">
       <div>Time Limit</div>
       <div>{{.Time}}s</div>
       <div>Memory Limit</div>

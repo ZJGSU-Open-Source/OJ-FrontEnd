@@ -2,7 +2,7 @@ var gulp = require('gulp');
 //页面名称
 var list = require('./list.json');
 
-var BASE_URL = 'D:/workspace/go/src/GoOnlineJudge';
+var BASE_URL = '/Users/rex/workspace/go/src/GoOnlineJudge';
 
 // 引入组件
 var less = require('gulp-less'),            // less

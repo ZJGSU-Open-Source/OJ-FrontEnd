@@ -7,8 +7,8 @@
       <div class="link">
         <a href="/admin/contests">List</a>
       </div>
-      <div class="link current">
-        <a>Add</a>
+      <div class="link">
+        <a href="/admin/contests/new">Add</a>
       </div>
     </div>
   </div>
